@@ -12,23 +12,6 @@ import (
 	"github.com/bitly/go-simplejson"
 )
 
-type PurchaseRequest struct {
-	Budget                   float32
-	StockSymbolAndPercentage string
-}
-
-type PurchaseResponse struct {
-	TradeId         int
-	Stocks           []string
-	UninvestedAmount float32
-}
-
-type CheckResponse struct {
-	Stocks           []string
-	CurrentMarketValue float32
-	UninvestedAmount float32
-}
-
 //one check for all different errors
 func checkError(err error) {
 	if err != nil {
